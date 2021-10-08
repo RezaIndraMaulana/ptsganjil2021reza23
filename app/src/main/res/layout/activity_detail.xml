@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#787A91"
+    tools:context=".DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F0071"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="50dp"
+                android:text="Description"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/click_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_circle_black_24dp" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_sport"
+                android:layout_width="411dp"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:id="@+id/tx_sport_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="casual"
+                android:text="@string/sports_name"
+                android:textColor="#0F044C"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:layout_below="@id/tx_sport_name"
+                android:layout_marginLeft="20dp"
+                android:textColor="#EEEEEE"
+                android:layout_marginTop="6dp"
+                android:text="@string/description"
+                android:textSize="32dp" />
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:textColor="#EEEEEE"
+                android:layout_below="@id/tx_sport_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/description"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
