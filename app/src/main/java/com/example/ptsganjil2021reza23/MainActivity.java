@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +24,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    ProgressDialog loading;
     ArrayList<SportsModel>sportlist;
     RecyclerView rvsport;
     SportsAdapter sportsAdapter;
@@ -32,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        loading = new ProgressDialog(MainActivity.this);
+        loading.setCancelable(false);
+        loading.setTitle("Tunggu Sebentar");
+        loading.setMessage("Sedang Mengambil Data");
         rvsport = findViewById(R.id.rv_sport);
         savean = findViewById(R.id.savean_main);
 
@@ -50,13 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
     void getDataApi() {
-        AndroidNetworking.get("https://www.thesportsdb.com/api/v1/json/1/all_sports.php")
+        loading.show();
+        AndroidNetworking.get("https://www.thesportsdb.com/api/v1/json/2/all_sports.php")
 
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
+                            loading.dismiss();
                             sportlist = new ArrayList<>();
                             JSONArray sports = response.getJSONArray("sports");
                             for (int i = 0; i < sports.length(); i++) {

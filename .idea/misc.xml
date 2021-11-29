@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/activity_detail.xml" value="0.18819655521783182" />
+        <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/activity_detail_favorite.xml" value="0.1585144927536232" />
+        <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/activity_favorit.xml" value="0.1585144927536232" />
+        <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/activity_main.xml" value="0.1585144927536232" />
+        <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/activity_my_application.xml" value="0.259375" />
+        <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/activity_splash.xml" value="0.1585144927536232" />
+        <entry key="..\:/Project/ProjectApp/ptsganjil2021reza23/app/src/main/res/layout/item_list.xml" value="0.1585144927536232" />
       </map>
     </option>
   </component>
